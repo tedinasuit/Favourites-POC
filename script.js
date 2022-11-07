@@ -1,11 +1,24 @@
-//const colorsArray = ["blue", "green", "white"];
-//localStorage.setItem('colors', JSON.stringify(colorsArray));
+const ul = document.querySelector('ul');
+const input = document.getElementById('item');
+let itemsArray = localStorage.getItem('items') ?
+JSON.parse(localStorage.getItem('items')) : [];
 
-//const numbersArray = [1, 2, 3];
-//localStorage.setItem('numbers', JSON.stringify(numbersArray));
+itemsArray.forEach(liMaker);
+function liMaker (text){
+    const li = document.createElement('li')
+    li.textContent = text;
+    ul.appendChild(li);
+}
 
-const colorsData =  JSON.parse(localStorage.getItem('colors'));
-console.log(colorsData);
+function add(){
+    itemsArray.push(input.value);
+    localStorage.setItem('items', JSON.stringify(itemsArray));
+    liMaker(input.value);
+    input.value = '';
+}
 
-const numbersData =  JSON.parse(localStorage.getItem('numbers'));
-console.log(numbersData);
+function del(){
+    localStorage.clear();
+    ul.innerHTML = '';
+    itemsArray = [];
+}
