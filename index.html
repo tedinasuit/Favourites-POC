@@ -1,38 +1,28 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link rel='stylesheet' type='text/css' href='style.css'>
 </head>
-
 <body>
-    <div class="container">
-        <div class="input-box">
-            <label for="color">Color name</label>
-            <br>
-            <input id="color" type="text">
-            <br>
-            <br>
-            <label for="hex">Hex code</label>
-            <br>
-            <input id="hex" type="text">
-            <br>
-            <br>
-            <button onclick="add()">Enter</button>
+
+<div>
+    <ul id="myUL" class="hs full">
+        <div id="Brazil">
+            <a class="explore" href="Brazil.html"><li class="item-trips">Brazil</li></a>
+        <button onclick="addB()">Brazil fav</button>
+        <button onclick="delB()">Brazil del</button>
         </div>
-    </div>
+        <li class="item-trips" id="Greece"><a href="#">Greece</a></li>
+        <li class="item-trips" id="Mexico"><a href="#">Mexico</a></li>
+        <li class="item-trips" id="Norway"><a href="#">Norway</a></li>
+    </ul>
+</div>
 
-    <div class="container">
-        <div class="color-boxes">
+<h2>favourites</h2>
+<ul class="myclass"></ul>
 
-        </div>
-
-    </div>
-
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
-
-
 </html>
